@@ -2,6 +2,53 @@ const global = {
     currentPage: window.location.pathname
 }
 
+async function displayPopularMovies() {
+    const { results } = await fetchAPIData('movie/popular');
+    console.log(results);
+
+    results.forEach(movie => {
+        const div = document.createElement('div');
+        div.classList.add('card');
+        div.innerHTML = `
+         <a href="movie-details.html?${movie.id}">
+            ${
+                movie.poster_path 
+                ? `<img
+              src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
+              class="card-img-top"
+              alt="Movie Title"
+            />` : `<img
+              src="../images/no-image.jpg"
+              class="card-img-top"
+              alt="{movie.title}"
+            />`
+            }
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">${movie.title}</h5>
+            <p class="card-text">
+              <small class="text-muted">Release: ${movie.release_date}</small>
+            </p>
+          </div>
+        `;
+    document.querySelector('#popular-movies').appendChild(div);
+    });
+}
+
+// Fetching data from API
+
+async function fetchAPIData(endpoint) {
+    const API_KEY = 'd14c168648b5234813c397639d0b7e29';
+    const API_URL = 'https://api.themoviedb.org/3/';
+
+    const response = await fetch(
+        `${API_URL}${endpoint}?api_key=${API_KEY}&language=en=US`
+    );
+    console.log(response);
+    const data = await response.json();
+    return data;
+}
+
 //HighLight active Link
 
 function highlightActiveLink(){
@@ -18,6 +65,8 @@ function highlightActiveLink(){
 function init(){
     switch(global.currentPage) {
         case'/':
+        case '/index.html':
+        displayPopularMovies();
         console.log('Home');
         break;
         case '/shows.html':
