@@ -245,7 +245,53 @@ function displayBackgroundImage(type, backgroundPath){
   
 
 }
+// Slider
 
+async function displaySlider(){
+  const { results } = await fetchAPIData('movie/now_playing');
+
+  results.forEach((movie) => {
+    const div = document.createElement('div');
+    div.classList.add('swiper-slide');
+
+    div.innerHTML = `
+             <a href="movie-details.html?=${movie.id}">
+              <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" 
+              alt="${movie.title}" />
+            </a>
+            <h4 class="swiper-rating">
+              <i class="fas fa-star text-secondary"></i> ${movie.vote_average.toFixed(1)} / 10</h4>
+   `;
+
+    document.querySelector('.swiper-wrapper').appendChild(div);
+    initSwiper();
+  })
+}
+
+function initSwiper() {
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    freeMode: true,
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: true
+    },
+    breakpoints: {
+      400: {
+        slidesPerView: 1
+      },
+      700: {
+        slidesPerView: 3
+      },
+      1200: {
+        slidesPerView: 4
+      },
+    }
+  })
+  console.log(swiper);
+};
 
 function showSpinner(){
     document.querySelector('.spinner').classList.add('show');
@@ -276,6 +322,7 @@ function init(){
         case'/':
         case '/index.html':
         displayPopularMovies();
+        displaySlider();
         break;
         case '/shows.html':
             displayPopularShows();
