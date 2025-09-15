@@ -12,8 +12,8 @@ Desktop:
 
 Mobile:
 
-![IMG_3288](https://github.com/user-attachments/assets/be92d933-ac4c-479a-87f5-89677140419f)
-
-![IMG_3289](https://github.com/user-attachments/assets/b3f7e245-edbb-4066-b9b3-19325b946ee1)
-
-![IMG_3290](https://github.com/user-attachments/assets/82a28cf0-bc7d-4fb7-bfeb-4eb95b360b20)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/be92d933-ac4c-479a-87f5-89677140419f" width="200">
+  <img src="https://github.com/user-attachments/assets/b3f7e245-edbb-4066-b9b3-19325b946ee1" width="200">
+  <img src="https://github.com/user-attachments/assets/82a28cf0-bc7d-4fb7-bfeb-4eb95b360b20" width="200">
+</p>
