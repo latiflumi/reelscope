@@ -479,6 +479,7 @@ function init(){
         displayPopularMovies();
         displaySlider();
         break;
+        case 'shows':
         case '/shows.html':
             displayPopularShows();
             break;
@@ -488,7 +489,7 @@ function init(){
         case '/tv-details.html':
           displayShowDetails();
             break;
-        case '/search.html':
+            case '/search.html':
             search();
             break;    
     }
