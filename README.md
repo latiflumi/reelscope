@@ -17,7 +17,7 @@ HTML, CSS, JavaScript, API integration
 
 ## Screenshots from the app
 
-<b>Desktop:</b>
+## Desktop
 
 ![Screenshot 2025-09-15 111909](https://github.com/user-attachments/assets/163523bc-49c8-4b35-a520-7c123500ade9)
 
@@ -25,7 +25,7 @@ HTML, CSS, JavaScript, API integration
 
 ![Screenshot 2025-09-15 111608](https://github.com/user-attachments/assets/75e930aa-f7e7-4c03-983f-463e072991a0)
 
-<b>Mobile:</b>
+## Mobile
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/be92d933-ac4c-479a-87f5-89677140419f" width="200">
