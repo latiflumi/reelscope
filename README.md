@@ -1,7 +1,21 @@
 <h2> ReelScope </h2>
 
-<p> Movie and shows info app fetches data from the public API https://themoviedb.org/, you can register your account there and get your own API Key </p>
-<p> The app is customized for mobile and desktop </p>
+## Live Demo
+Check out the live version here: [ReelScope](https://reelscope.netlify.app)
+
+## Features
+- Search movies by name
+- View detailed movie info
+- Responsive design
+
+## Technologies Used
+HTML, CSS, JavaScript, API integration
+
+## How to Run Locally
+1. Clone the repo
+2. Open `index.html` in your browser
+
+## Screenshots from the app
 
 <b>Desktop:</b>
 
