@@ -134,7 +134,7 @@ async function displayMovieDetails() {
     <img
               src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
               class="card-img-top"
-              alt="Movie Title"
+              alt="${movie.name}"
             />
     
     `:

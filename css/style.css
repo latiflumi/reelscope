@@ -345,4 +345,14 @@ section h2 {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* 2 columns only */
   }
+  .details-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .details-top img {
+    margin-right: -0.5%;
+  }
+  .details-top h2 {
+    padding-top: 20px;
+  }
 }
