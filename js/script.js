@@ -35,13 +35,13 @@ async function displayPopularMovies() {
               alt="{movie.title}"
             />`
             }
-          </a>
-          <div class="card-body">
+            <div class="card-body">
             <h5 class="card-title">${movie.title}</h5>
             <p class="card-text">
               <small class="text-muted">Release: ${movie.release_date}</small>
             </p>
           </div>
+          </a>
         `;
     document.querySelector('#popular-movies').appendChild(div);
     });
@@ -68,13 +68,13 @@ async function displayPopularShows() {
               alt="{show.name}"
             />`
             }
-          </a>
           <div class="card-body">
             <h5 class="card-title">${show.name}</h5>
             <p class="card-text">
               <small class="text-muted">Release: ${show.first_air_date}</small>
             </p>
-          </div>
+            </div>
+            </a>
         `;
     document.querySelector('#popular-shows').appendChild(div);
     });
@@ -329,13 +329,13 @@ function displaySearchResults(results){
               alt="${global.search.type === 'movie' ? result.title : result.name}"
             />`
             }
-          </a>
           <div class="card-body">
             <h5 class="card-title">${global.search.type === 'movie' ? result.title : result.name}</h5>
             <p class="card-text">
               <small class="text-muted">Release: ${global.search.type === 'movie' ? result.release_date : result.first_air_date}</small>
             </p>
           </div>
+        </a>
         `;
     document.querySelector('#search-results-heading').innerHTML = `
             <h2>${results.length} of ${global.search.totalResults} Results for ${global.search.term}</h2>
