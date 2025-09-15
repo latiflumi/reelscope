@@ -154,11 +154,15 @@ ul {
   align-items: center;
 }
 
-.main-footer .container .logo {
+.main-footer .container .logo{
   color: #fff;
   font-size: 25px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.logo a:hover {
+    color: var(--color-secondary);
 }
 
 .main-footer .container .social-links {
