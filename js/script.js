@@ -189,7 +189,6 @@ async function displayShowDetails() {
     
     const show = await fetchAPIData(`tv/${showId}`)
 
-    console.log(show);
     // Background image
     displayBackgroundImage('tv', show.backdrop_path);
 
@@ -435,7 +434,6 @@ function initSwiper() {
       },
     }
   })
-  console.log(swiper);
 };
 
 function showSpinner(){
